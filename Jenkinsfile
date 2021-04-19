@@ -8,8 +8,8 @@ pipeline {
 	        MINOR = '0'
 	        //Orchestrator Services
 	        UIPATH_ORCH_URL = "https://cloud.uipath.com/"
-	        UIPATH_ORCH_LOGICAL_NAME = "anupaminc"
-	        UIPATH_ORCH_TENANT_NAME = "Descriptify"
+	        UIPATH_ORCH_LOGICAL_NAME = "<Logical_Name>"
+	        UIPATH_ORCH_TENANT_NAME = "<Tenant_Name>"
 	        UIPATH_ORCH_FOLDER_NAME = "Default"
 	    }
 	
@@ -53,9 +53,9 @@ pipeline {
 	
 
 	         // Deploy Stages
-	        stage('Deploy to UAT') {
+	        stage('Deploy to QA') {
 	            steps {
-	                echo "Deploying ${BRANCH_NAME} to UAT "
+	                echo "Deploying ${BRANCH_NAME} to QA "
 	                UiPathDeploy (
 	                packagePath: "Output\\${env.BUILD_NUMBER}",
 	                orchestratorAddress: "${UIPATH_ORCH_URL}",
