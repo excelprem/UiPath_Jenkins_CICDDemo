@@ -10,8 +10,9 @@ pool:
   vmImage: ubuntu-latest
 
 steps:
-- script: echo Hello, world!
+- script: echo UI Path Folder Name + $(UIPATH_ORCH_FOLDER_NAME)
   displayName: 'Run a one-line script'
+    
 
 - script: |
     echo Add other tasks to build, test, and deploy your project.
